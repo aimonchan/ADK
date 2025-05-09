@@ -2,13 +2,13 @@ import os
 import datetime
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent
-from google.adk.models.lite_llm import LiteLlm
+# from google.adk.models.lite_llm import LiteLlm
 
 # https://docs.litellm.ai/docs/providers/openrouter
-model = LiteLlm(
-    model="openrouter/qwen/qwen3-8b:free",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
-)
+# model = LiteLlm(
+#     model="openrouter/qwen/qwen3-8b:free",
+#     api_key=os.getenv("OPENROUTER_API_KEY"),
+# )
 
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
@@ -64,8 +64,8 @@ def get_current_time(city: str) -> dict:
 
 root_agent = Agent(
     name="weather_time_agent",
-    model=model,
-    # model="gemini-2.0-flash",
+    # model=model,
+    model="gemini-2.0-flash",
     description=(
         "Agent to answer questions about the time and weather in a city."
     ),
