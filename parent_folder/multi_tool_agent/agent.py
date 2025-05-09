@@ -2,7 +2,7 @@ import os
 import datetime
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent
-# from google.adk.models.lite_llm import LiteLlm
+from google.adk.models.lite_llm import LiteLlm
 
 # https://docs.litellm.ai/docs/providers/openrouter
 # model = LiteLlm(
